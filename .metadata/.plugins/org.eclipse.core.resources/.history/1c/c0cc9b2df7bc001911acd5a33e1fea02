@@ -1,0 +1,14 @@
+package com.bridgelabz;
+
+public class GeoLocationandNotification extends BaseClass {
+
+	public static void main(String[] args) {
+		
+		driver.get("https://www.cleartrip.com/");
+		driver.manage().window().maximize();
+		
+		
+
+	}
+
+}

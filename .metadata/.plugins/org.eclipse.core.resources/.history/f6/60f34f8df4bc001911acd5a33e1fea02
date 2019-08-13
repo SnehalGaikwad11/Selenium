@@ -1,0 +1,15 @@
+package com.bridgelabz;
+
+import org.openqa.selenium.By;
+
+public class Alert_PopUp extends BaseClass {
+	public static void main(String[] args) {
+		
+		driver.navigate().to("https://www.testandquiz.com/selenium/testing.html");
+		driver.findElement(By.linkText("")).click();
+		
+		
+	}
+	
+
+}

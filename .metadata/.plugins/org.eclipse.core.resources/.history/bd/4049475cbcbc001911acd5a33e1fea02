@@ -1,0 +1,23 @@
+package com.bridgelabz;
+
+import java.util.Date;
+
+public class SSWithDate extends BaseClass{
+	
+public static void main(String[] args) {
+	
+	driver.manage().window().maximize();
+	driver.get("https://www.facebook.com");
+	
+	Date d=new Date();
+	
+	// Printing the actual date
+			String date1 = d.toString();
+			System.out.println(date1);
+
+}	
+	
+	
+	
+	
+}

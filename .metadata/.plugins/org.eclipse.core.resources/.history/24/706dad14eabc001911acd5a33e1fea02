@@ -1,0 +1,25 @@
+package com.bridgelabz;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class DropdownMenu {
+		public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver");
+		//open the browser
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://www.actimind.com/");
+		//find the menu "About Company"
+		driver.findElement(By.xpath("/html/body/header/div/div/div/nav/ul/li[1]/a")).click();
+		WebElement menu = driver.findElement(By.xpath(xp));
+		//mouse hover on "About Company" menu
+		Actions actions = new Actions(driver);
+		actions.moveToElement(menu).perform();//click on submenu "Basic Facts"
+		WebElement submenu = driver.findElement(By.linkText("Basic Facts"));
+		submenu.click();
+		}}
+
+

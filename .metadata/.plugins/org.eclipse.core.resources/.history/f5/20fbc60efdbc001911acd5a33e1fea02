@@ -1,0 +1,19 @@
+package com.bridgelabz;
+
+import org.openqa.selenium.By;
+
+public class FileUploadUsingRobot extends BaseClass {
+
+	public static void main(String[] args) throws InterruptedException {
+		driver.manage().window().maximize();
+
+		driver.get("https://www.indeed.co.in");
+		
+		driver.findElement(By.xpath("//a[@class='icl-Button icl-Button--primary icl-Button--md']")).click();
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("")).click();
+
+	}
+
+}

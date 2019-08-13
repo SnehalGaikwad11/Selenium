@@ -1,0 +1,29 @@
+package com.bridgelabz;
+
+import java.io.File;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Screenshot {
+	public static void main(String[] args) throws Exception {
+		
+		// setting the path of the chrome driver executable
+				System.setProperty("webdriver.gecko.driver", ".//driver//chromediver");
+
+				// Launch the chrome browser
+				WebDriver driver = new ChromeDriver();
+
+		driver.get("https://www.facebook.com");
+		TakesScreenshot ts=(TakesScreenshot) driver;
+		
+		File  srcFile=ts.getScreenshotAs(OutputType.FILE);
+		
+		File destFile=new  File("./ScreenShot/Facebook.png");
+		
+	}
+	
+
+}

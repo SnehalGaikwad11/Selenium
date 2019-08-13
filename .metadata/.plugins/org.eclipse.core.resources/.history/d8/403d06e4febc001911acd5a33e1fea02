@@ -1,0 +1,61 @@
+package com.bridgelabz;
+
+import java.awt.AWTException;
+import java.awt.Rectangle;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
+import java.io.File;
+
+import javax.imageio.ImageIO;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+
+//Test Scenario:
+//1. Access the website url http://www.indeed.co.in.
+//2. Click on upload resume link.
+//3. Implement the Logic using the java.awt.robot to provide the absolute location of the file.
+//
+//4. Capture the full page of the screenshot by providing the dimensions.
+
+public class FileUploadUsingRobot extends BaseClass {
+
+	public static void main(String[] args) throws InterruptedException, AWTException {
+		driver.manage().window().maximize();
+
+		driver.get("https://www.indeed.co.in");
+		
+		driver.findElement(By.xpath("//a[@class='icl-Button icl-Button--primary icl-Button--md']")).click();
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("//button[@class='icl-Button icl-Button--primary icl-Button--lg icl-Button--block janus-upload-button']")).click();
+	    Thread.sleep(1000);
+	    
+	    StringSelection strSel=new StringSelection("/home/userq/Desktop");
+	    Toolkit.getDefaultToolkit().getSystemClipboard().setContents(strSel, null);
+
+	    
+	    
+	    Robot robot=new Robot();
+	    
+	    robot.keyPress(KeyEvent.VK_CONTROL);
+	    robot.keyPress(KeyEvent.VK_V);
+	    robot.keyRelease(KeyEvent.VK_CONTROL);
+	    
+	    Thread.sleep(3000);
+	    
+	    robot.keyPress(KeyEvent.VK_ENTER);
+	    robot.keyRelease(KeyEvent.VK_ENTER);
+	    
+	    
+	    Dimension d1 = new Dimension(1200,1800);
+		BufferedImage bufImage = robot.createScreenCapture(new Rectangle());
+		File f = new File("indeedScreenshot.jpg");
+		ImageIO.write(bufImage,"jpg", f);
+			
+	}
+
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2019-08-12T09:26:17Z" name="Suite" finished-at="2019-08-12T09:26:55Z" duration-ms="37681">
+    <groups>
+    </groups>
+    <test started-at="2019-08-12T09:26:17Z" name="Testfirefox" finished-at="2019-08-12T09:26:30Z" duration-ms="12932">
+      <class name="com.bridgelabz.MultiBrowser">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:com.bridgelabz.MultiBrowser@4ddced80]" started-at="2019-08-12T09:26:17Z" name="beforeTest" finished-at="2019-08-12T09:26:24Z" duration-ms="6919" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="login()[pri:0, instance:com.bridgelabz.MultiBrowser@4ddced80]" started-at="2019-08-12T09:26:24Z" name="login" finished-at="2019-08-12T09:26:30Z" duration-ms="5689" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.bridgelabz.MultiBrowser@4ddced80]" started-at="2019-08-12T09:26:30Z" name="afterTest" finished-at="2019-08-12T09:26:30Z" duration-ms="288" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.bridgelabz.MultiBrowser -->
+    </test> <!-- Testfirefox -->
+    <test started-at="2019-08-12T09:26:30Z" name="Testchrome" finished-at="2019-08-12T09:26:55Z" duration-ms="24583">
+      <class name="com.bridgelabz.MultiBrowser">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:com.bridgelabz.MultiBrowser@3c419631]" started-at="2019-08-12T09:26:30Z" name="beforeTest" finished-at="2019-08-12T09:26:39Z" duration-ms="8597" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="login()[pri:0, instance:com.bridgelabz.MultiBrowser@3c419631]" started-at="2019-08-12T09:26:39Z" name="login" finished-at="2019-08-12T09:26:47Z" duration-ms="8560" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.bridgelabz.MultiBrowser@3c419631]" started-at="2019-08-12T09:26:47Z" name="afterTest" finished-at="2019-08-12T09:26:55Z" duration-ms="7407" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.bridgelabz.MultiBrowser -->
+    </test> <!-- Testchrome -->
+  </suite> <!-- Suite -->
+</testng-results>

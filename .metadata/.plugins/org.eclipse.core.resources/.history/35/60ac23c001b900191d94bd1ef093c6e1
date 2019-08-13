@@ -1,0 +1,37 @@
+package com.bridgelabz;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Xpaths_Independent_dependent_actitime_setbydefault {
+
+	public static void main(String[] args) throws InterruptedException {
+
+		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver");
+
+		WebDriver driver = new ChromeDriver();
+
+		driver.get("https://www.facebook.com");
+
+		driver.findElement(By.id("username")).sendKeys("9158472761");
+		driver.findElement(By.name("pwd")).sendKeys("Snehal@1234");
+
+//click on login button
+		driver.findElement(By.xpath("//*[@id=\"u_0_3\"]")).click();
+		Thread.sleep(4000);
+
+//Click on settings tab on home page
+		driver.findElement(By.xpath("//*[@id=\"js_4j\"]/div/div/ul/li[7]/a/span/span")).click();
+		Thread.sleep(2000);
+
+//Click on Name
+		driver.findElement(By.xpath("//*[@id=\"u_fetchstream_2_4\"]")).click();
+		Thread.sleep(4000);
+
+//Click on testing link present under Type of work column
+		driver.findElement(By.xpath("//*[@id=\"u_1n_2\"]")).click();
+		
+		driver.close();
+	}
+}

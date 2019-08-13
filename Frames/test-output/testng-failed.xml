@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="TestChrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.bridgelabz.MultiBrowser">
+        <methods>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.bridgelabz.MultiBrowser -->
+    </classes>
+  </test> <!-- TestChrome(failed) -->
+</suite> <!-- Failed suite [Suite] -->

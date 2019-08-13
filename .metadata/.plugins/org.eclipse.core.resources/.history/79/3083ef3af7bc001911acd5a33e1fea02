@@ -1,0 +1,25 @@
+package com.bridgelabz;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class GeoLocationandNotification extends BaseClass {
+
+	public static void main(String[] args) {
+		
+		driver.manage().window().maximize();
+		
+		
+		ChromeOptions option=new ChromeOptions();
+		option.addArguments("disable-geolocation");
+		option.addArguments("disable-notification");
+		
+		WebDriver driver=new ChromeDriver(option);
+		
+		driver.get("https://www.cleartrip.com/");
+		
+		Thread.sleep(3000);
+
+	}
+
+}

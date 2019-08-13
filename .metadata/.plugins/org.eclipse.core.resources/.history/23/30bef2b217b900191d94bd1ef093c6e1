@@ -1,0 +1,40 @@
+package com.bridgelabz;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class VerifyhomepageUsingUniqueElement {
+
+	public static void main(String[] args) throws InterruptedException {
+
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--disable-notifications");
+
+		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver");
+		WebDriver driver = new ChromeDriver(options);
+		driver.get("https://www.facebook.com");
+		driver.findElement(By.id("email")).sendKeys("9158472761");
+		driver.findElement(By.name("pass")).sendKeys("Snehal@1234");
+		driver.findElement(By.xpath("//label[@id='loginbutton']")).click();
+		Thread.sleep(3000);
+
+		// WebDriver driver =new ChromeDriver(options);
+
+		WebElement more = driver.findElement(By.xpath("//div[@id='userNavigationLabel']"));
+		more.click();
+		Thread.sleep(3000);
+
+		WebElement logoutBtn = driver.findElement(By.xpath("//li[@class='_54ni navSubmenu _6398 _64kz __MenuItem']"));
+		logoutBtn.click();
+		if (logoutBtn.isDisplayed()) {
+			System.out.println("Welcome to Facebook home page");
+		} else {
+			System.out.println("Home page is NOT displayed");
+		}
+	}
+}
+	
+}

@@ -1,0 +1,27 @@
+package com.bridgelabz;
+
+import org.openqa.selenium.By;
+
+public class ContextClick_MailArchieve extends BaseClass {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		driver.get("https://www.gmail.com");
+		
+		driver.findElement(By.xpath("//*[@id=\"identifierId\"]")).sendKeys("snehalbridgelabz@gmail.com");
+		driver.findElement(By.xpath("//*[@id=\"identifierNext\"]/span/span")).click();
+		Thread.sleep(3000);
+		
+		
+		driver.findElement(By.xpath("//*[@id=\"password\"]/div[1]/div/div[1]/input")).sendKeys("Snehal1196");
+		driver.findElement(By.xpath("//*[@id=\"passwordNext\"]/span/span")).click();
+		Thread.sleep(3000);
+		
+		
+		driver.findElement(By.xpath("//*[@id=\":po\"]")).click();
+		Thread.sleep(3000);
+		
+
+	}
+
+}

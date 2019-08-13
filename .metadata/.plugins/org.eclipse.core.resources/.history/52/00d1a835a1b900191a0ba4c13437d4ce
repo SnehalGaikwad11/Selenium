@@ -1,0 +1,10 @@
+package com.bridgelabz;
+
+public class DropDownList {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver");
+
+	}
+
+}

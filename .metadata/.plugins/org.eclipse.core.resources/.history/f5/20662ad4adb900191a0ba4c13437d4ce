@@ -1,0 +1,41 @@
+package com.bridgelabz;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
+
+public class DD {
+	
+	@Test
+	public void DD()
+	{
+		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver");
+		WebDriver driver = new ChromeDriver();
+		
+		// Launch Website
+		driver.get("https://www.facebook.com");
+		driver.manage().window().maximize();
+
+		//Select month fr4om dropdown list using id
+		WebElement day_dropdown=driver.findElement(By.id("day"));
+		WebElement month_dropdown=driver.findElement(By.id("month"));
+		WebElement year_dropdown=driver.findElement(By.id("year"));
+		 
+		Select day_dd=new Select(day_dropdown);
+        Select month_dd=new Select(month_dropdown);
+		Select year_dd=new Select(year_dropdown);
+
+
+		WebElement selected_value=day_dd.getFirstSelectedOption();
+		WebElement selected_value1=month_dd.getFirstSelectedOption();
+		WebElement selected_value2=year_dd.getFirstSelectedOption();
+
+
+		
+		
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.bridgelabz;
+
+public class FileUploadUsingRobot extends BaseClass {
+
+	public static void main(String[] args) {
+		driver.manage().window().maximize();
+
+		driver.get("https://www.indeed.co.in");
+
+	}
+
+}

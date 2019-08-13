@@ -1,0 +1,20 @@
+package com.bridgelabz;
+
+import java.awt.AWTException;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Keyboard_Mouse_Operations {
+	public static void main(String[] args) throws InterruptedException,AWTException{
+		
+		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver");
+		
+		WebDriver driver=new ChromeDriver();
+		
+		driver.navigate().to("http://www.gmail.com");
+		
+	}
+	
+
+}

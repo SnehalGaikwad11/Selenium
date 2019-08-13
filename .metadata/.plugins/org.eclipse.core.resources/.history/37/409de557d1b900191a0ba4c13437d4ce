@@ -1,0 +1,20 @@
+package com.bridgelabz;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class MouseMoment {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("http://spicejet.com/");
+		
+		Actions action=new Actions(driver);
+ 
+		
+	}
+	
+
+}

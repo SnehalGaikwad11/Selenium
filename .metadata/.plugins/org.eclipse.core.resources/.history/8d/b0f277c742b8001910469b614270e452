@@ -1,0 +1,38 @@
+package com.bridgelabz;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class HandleBrowserNavigation {
+	public static void main(String[] args) throws InterruptedException {
+
+		System.setProperty("webdriver.gecko.driver", ".//driver//chromediver");
+
+		WebDriver driver = new ChromeDriver();
+
+		driver.get("https://www.facebook.com");
+		
+		//which is used to navigate to any website.
+		driver.navigate().to("http://www.gmail.com");
+		Thread.sleep(3000);
+        
+		//it is used to navigate to the immediate previous page.
+		driver.navigate().back();
+		System.out.println("Back Action is Performed");
+		Thread.sleep(3000);
+		
+        //it is used to navigate to the immediate next page.
+		driver.navigate().forward();
+		System.out.println("Forward Action is Performed");
+		Thread.sleep(3000);
+        
+		//it is used to refresh the current page.
+		driver.navigate().refresh();
+		System.out.println("Refresh Action is Performed");
+		Thread.sleep(3000);
+
+		driver.close();
+
+	}
+
+}

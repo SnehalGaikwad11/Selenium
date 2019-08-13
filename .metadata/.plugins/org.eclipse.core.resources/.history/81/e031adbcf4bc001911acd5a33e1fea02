@@ -1,0 +1,20 @@
+package com.bridgelabz;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+
+public class Alert_PopUp extends BaseClass {
+	public static void main(String[] args) {
+		
+		driver.navigate().to("https://www.testandquiz.com/selenium/testing.html");
+		driver.findElement(By.linkText("Generate Alert Box")).click();
+		
+		
+		Alert alert=(Alert) driver.switchTo().alert();
+		
+		alert.accept();
+		
+	}
+	
+
+}

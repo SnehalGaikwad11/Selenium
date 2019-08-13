@@ -1,0 +1,13 @@
+package com.bridgelabz;
+
+import java.awt.AWTException;
+
+public class Keyboard_Mouse_Operations {
+	public static void main(String[] args) throws InterruptedException,AWTException{
+		
+		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver");
+		
+	}
+	
+
+}

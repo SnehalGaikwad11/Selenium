@@ -1,0 +1,40 @@
+package com.bridgelabz;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Locators {
+	public static void main(String[] args)  throws InterruptedException{
+		
+		
+		WebDriver driver=new ChromeDriver();
+		
+		// Enter the URL of web page
+		driver.get("https://www.facebook.com");
+		
+		// Used “id” locator to find USERNAME text box
+		WebElement unwb=driver.findElement(By.id("email"));
+		
+		//Clear the existing value present in the text box
+		unwb.clear();
+		
+		// Enter value into the USERNAME text box
+		unwb.sendKeys("9158472761");
+		
+		WebElement passwb=driver.findElement(By.name("pass"));
+		
+		passwb.clear();
+		
+		Thread.sleep(2000);
+		
+		passwb.sendKeys("Snehal@1234");
+		
+		driver.findElement(By.linkText("Forgotten account?")).click();
+		Thread.sleep(2000);
+		
+	}
+	
+
+}

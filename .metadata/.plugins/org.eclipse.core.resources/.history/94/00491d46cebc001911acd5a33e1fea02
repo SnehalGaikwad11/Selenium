@@ -1,0 +1,11 @@
+package com.bridgelabz;
+
+public class ContextClickusingActionClass extends BaseClass {
+	
+	public static void main(String[] args) {
+		
+		driver.get("https://www.facebook.com");
+		
+	}
+
+}

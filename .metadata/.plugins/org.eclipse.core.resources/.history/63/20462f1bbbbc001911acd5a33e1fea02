@@ -1,0 +1,18 @@
+package com.bridgelabz;
+
+public class BaseClass {
+static {
+		
+		//System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
+		//System.setProperty("webdriver.ie.driver", "./drivers/IEDriverServer");
+}
+
+	//public static WebDriver driver = new FirefoxDriver();
+	public static WebDriver driver = new ChromeDriver();
+
+	
+}
+
+
+
